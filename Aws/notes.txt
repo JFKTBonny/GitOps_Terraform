@@ -1,0 +1,22 @@
+*** driftctl is an excellent tool that detects, tracks, and alerts on infrastructure drifts (https://driftctl.com/)...
+#### Terraform  Commands Reference:
+    terraform init: Initializes the terraform code by downloading the dependencies
+
+    terraform plan: Shows the details about the CRUD (create, read, update,
+                    and delete) operations that will be performed on the cloud
+                    infrastructure. Uses the -out filename.tfplan flag to output the
+                    plan into a file
+
+    terraform apply: Accepts and applies the changes that were discussed in the
+                     earlier stage that perform all the CRUD operations. Uses the
+                     --auto-approve flag to automate
+
+    terraform destroy:  Destroys all the resources that were defined. 
+                        Uses the --auto-­approve flag to automate
+                        
+    terraform fmt: Formats the terraform code by applying the rules to all the .tf files under the root directory. 
+                   Uses the -recursive flag to applyto all .tf files in the subdirectories
+
+    terraform validate: Validates the terraform configuration files
+
+    terraform show: Shows the contents of the .tfstate file in a more readable manner

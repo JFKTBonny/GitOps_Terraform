@@ -1,0 +1,11 @@
+*** To confirm  an aws account  cli login : aws sts get-caller-identity --profile <your profile>
+
+*** To fetch all subnets: aws ec2 describe-subnets --query 'Subnets[*].[SubnetId,AvailabilityZone]'
+
+*** To fetch all sg: aws ec2 describe-subnets --query 'Subnets[*].[SubnetId,AvailabilityZone]'
+
+*** To query all ec2 running instances public ip: aws ec2 describe-instances  --query 'Reservations[*].Instances[*].[PublicIpAddress]'
+
+##### for other commands, use this link: Direct link:  https://docs.aws.amazon.com/cli/latest/index.html
+
+
