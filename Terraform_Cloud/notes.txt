@@ -1,0 +1,22 @@
+Terraform Cloud is an alternative to "s3 bucket + dynamo db" on aws,
+for storing and locking securely the terraform tfstate file after applying terraform configuration files...
+
+*** Workspaces must be created in order to store the state file in terraform cloud...
+    worspaces can be defined for specifiv env like dev, staging,and production...
+    The same code base can be leveraged and used accross multiple worspaces...
+
+
+commands to run for deploying infrastructure 
+              1-in Dev env: 
+                               - terraform init -backend-config=dev.hcl
+                               - terraform plan
+                               - terraform apply
+               2-in Prod env:
+                                - terraform init -backend-config=prod.hcl -reconfigure
+                                - terraform plan
+                                - terraform apply
+NB: "-reconfigure" because we still in the same directory used for deploying dev infrastructure,
+     and we need to reconfigure the backend and the state file for prod env....  
+     
+                                   
+                                
